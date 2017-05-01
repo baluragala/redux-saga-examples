@@ -1,11 +1,17 @@
-import {getUsersWatcher} from './users';
-import {fork,spawn} from "redux-saga/effects";
-
-/*
- export default function* rootSaga() {
- yield [getUsersWatcher()]
- }*/
+import {forkSpawnExampleMain} from './forkSpawnExample'
+import {runNonBlockingCallsExample} from './nonBlockingCalls'
+import {runBlockingCallsExample} from './blockingCalls'
+import {getUsersTakeEvery, getUsersTakeLatest, getUsersThrottle} from './sagaHelpers'
+import {runParallelCallsExample} from './parallel'
 
 export default function* rootSaga() {
-  yield spawn(getUsersWatcher)
+  yield [forkSpawnExampleMain(),
+    runNonBlockingCallsExample(),
+    runBlockingCallsExample(),
+    getUsersTakeLatest(),
+    getUsersTakeEvery(),
+    getUsersThrottle(),
+    runParallelCallsExample()
+  ]
 }
+

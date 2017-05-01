@@ -1,4 +1,26 @@
 {
+  "cities": [
+    {
+      "id": 1,
+      "name": "Bangalore",
+      "state": "Karnataka"
+    },
+    {
+      "id": 2,
+      "name": "Hyderabad",
+      "state": "Telangana"
+    },
+    {
+      "id": 3,
+      "name": "Chennai",
+      "state": "Tamilnadu"
+    },
+    {
+      "id": 4,
+      "name": "Comibatore",
+      "state": "Kerala"
+    }
+  ],
   "posts": [
     {
       "id": 1,
@@ -16,7 +38,6 @@
   "profile": {
     "name": "typicode"
   },
-
   "users": [
     {
       "gender": "female",
